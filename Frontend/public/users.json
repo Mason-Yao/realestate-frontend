@@ -1,0 +1,153 @@
+{
+  "users": [
+    {
+      "id": "USER_test_1",
+      "name": "Test User 1",
+      "dob": "01-01-1990",
+      "gender": "male",
+      "email": "test@user.com",
+      "phone": "0123456789",
+      "social": {
+        "wechat": "wechat-account",
+        "redbook": "redbook-account"
+      },
+      "pr": true,
+      "address": {
+        "street": "123 High St",
+        "suburb": "Sunnybank",
+        "state": "QLD"
+      },
+      "category": "GOLD",
+      "knownBy": "wechat friend since 2021",
+      "yearInAu": 2017,
+      "createdBy": "David",
+      "lastEdit": "12/01/2023",
+      "notes": [
+        {
+          "content": "wants to buy new apt once getting PR",
+          "date": "20-01-2023"
+        },
+        {
+          "content": "urgent buyer",
+          "date": "23-01-2023"
+        }
+      ],
+      "properties": [],
+      "relationships": [
+        {
+          "type": "AGENT",
+          "value": "boss_id"
+        }
+      ]
+    },
+    {
+      "id": "USER_test_2",
+      "name": "Test User 2",
+      "dob": "30-35",
+      "gender": "female",
+      "email": "test2@user2.com",
+      "phone": "284725395",
+      "social": {
+        "wechat": "wechat-account2",
+        "redbook": "redbook-account2"
+      },
+      "pr": false,
+      "address": {
+        "street": "22 Queen St",
+        "suburb": "Springfield",
+        "state": "QLD"
+      },
+      "category": "SILVER",
+      "knownBy": "redbook friend",
+      "yearInAu": 2019,
+      "createdBy": "Ryan",
+      "lastEdit": "12/12/2023",
+      "notes": [
+        {
+          "content": "wants to sell house next year",
+          "date": "28-12-2022"
+        },
+        {
+          "content": "wants to sell earlier",
+          "date": "13-01-2023"
+        }
+      ],
+      "properties": [],
+      "relationships": [
+        {
+          "type": "AGENT",
+          "value": "boss_id"
+        }
+      ]
+    },
+    {
+      "id": "USER_test_3",
+      "name": "Test User 3",
+      "dob": "30-35",
+      "gender": "unknown",
+      "email": "test3@user3.com",
+      "phone": "394857264",
+      "social": {
+        "wechat": "wechat-account2",
+        "redbook": "redbook-account2"
+      },
+      "pr": false,
+      "address": {
+        "street": "22 Tester St",
+        "suburb": "Underwood",
+        "state": "QLD"
+      },
+      "category": "BRONZE",
+      "knownBy": "redbook friend",
+      "createdBy": "Ryan",
+      "lastEdit": "12/12/2023",
+      "notes": [
+        {
+          "content": "just bought a new owner-occupied house",
+          "date": "24-08-2022"
+        },
+        {
+          "content": "consider to but IP next year",
+          "date": "29-11-2022"
+        },
+        {
+          "content": "consider to buy in WA",
+          "date": "15-01-2023"
+        }
+      ],
+      "properties": [],
+      "relationships": [
+        {
+          "type": "AGENT",
+          "value": "boss_id"
+        }
+      ]
+    }
+  ],
+  "relationSearchResults": [
+    {
+      "name": "Test User 1",
+      "dob": "01-01-1990",
+      "gender": "male",
+      "email": "test@user.com",
+      "phone": "0123456789",
+      "knownBy": "wechat friend since 2021"
+    },
+    {
+      "name": "Test User 2",
+      "dob": "01-01-1990",
+      "gender": "male",
+      "email": "test@user.com",
+      "phone": "0123456789",
+      "knownBy": "wechat friend since 2021"
+    },
+    {
+      "name": "Test User 3",
+      "dob": "01-01-1990",
+      "gender": "male",
+      "email": "test@user.com",
+      "phone": "0123456789",
+      "knownBy": "wechat friend since 2021"
+    }
+  ]
+}

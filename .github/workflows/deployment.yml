@@ -1,0 +1,37 @@
+name: Deploy
+run-name: Deploy to ${{inputs.env}}
+on:
+  workflow_dispatch:
+    inputs:
+      env:
+        type: choice
+        description: What environment to depoly?
+        required: true
+        options:
+          - jr-dev
+
+env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  VITE_APP_GMAP_API_KEY: ${{ secrets.VITE_APP_GMAP_API_KEY }}
+  AWS_DEFAULT_REGION: ap-southeast-2
+  CRM_ENV: ${{ inputs.env }}
+
+jobs:
+  deploy_frontend:
+    runs-on: ubuntu-latest
+    env:
+      S3_BUCKET_NAME: crm-jr.cyberlark.com.au
+      CRM_API_URL: https://api-crm-dev.cyberlark.com.au
+      CRM_JR_API_URL: ${{ vars.CRM_JR_API_URL }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build ${{inputs.env}}
+        run: make build_frontend
+
+      - name: Deploy ${{inputs.env}}
+        run: make deploy_frontend
+
+      - name: Refresh ${{inputs.env}}
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.AWS_CLOUDFRONT_ID }} --paths "/*"
